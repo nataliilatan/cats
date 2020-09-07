@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котейка | Наши номера</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="icon_customImage.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="wrapper header__section">
+                <div class="header__logo">
+                    <a href="/main/index.html" class="header__logo-link">
+                        <img src="./img/лого.svg" alt="Котейка">
+                    </a>
+                </div>
+                <nav class="header__navbar">
+                    <ul class="header__nav">
+                        <li class="header__list">
+                            <a href="#reason" class="header__list-link">
+                                Почему мы?
+                            </a>
+                        </li>
+                        <li class="header__list">
+                            <a href="#offers" class="header__list-link">
+                                Номера
+                            </a>
+                        </li>
+                        <li class="header__list">
+                            <a href="#review" class="header__list-link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="header__list">
+                            <a href="#contacts" class="header__list-link">
+                                Как нас найти
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>   
+    </header>
+    <main>  
+        <div class="store">
+            <div class="store__section wrapper">
+                <div class="store__header">
+                    <h2 class="__title">Наши номера</h2>
+                    <div class="select">
+                        <select name="type of sorting"  id="selector" class="store__selector">
+                            <option value="1" name="sort" selected> &uarr; &nbsp; По цене</option>
+                            <option value="2" name="sort"> &uarr; &nbsp; По площади</option>
+                            <option value="3" name="sort"> &darr; &nbsp; По цене </option>
+                            <option value="4" name="sort"> &darr; &nbsp; По площади</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="store__inner">
+                    <div class="store__left-block">
+                        <form action="" class="store_form">
+                            <p class="checkbox-text">Цена за сутки, &#8381;</p>
+                            <div class="cost__section">
+                                <input type="text" placeholder="от 100" class="cost_range">
+                                <input type="text" placeholder="от 600" class="cost_range">
+                            </div>
+                           <div class="space_checkbox">
+                            <p class="checkbox-text">Площадь</p>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="0,63м2" id="0,63м2">
+                                <label for="0,63м2"> &nbsp; 0,63 м2</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="0,90м2" id="0,90м2">
+                                <label for="0,90м2"> &nbsp; 0,90 м2</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="1,13м2" id="1,13м2">
+                                <label for="1,13м2"> &nbsp; 1,13 м2</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="1,56м2" id="1,56м2">
+                                <label for="1,56м2"> &nbsp; 1,56 м2</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="2,56м2" id="2,56м2">
+                                <label for="2,56м2"> &nbsp; 2,56 м2</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="2,88м2" id="2,88м2">
+                                <label for="2,88"> &nbsp; 2,88 м2</label>
+                            </div>
+                           </div>
+                            <p class="checkbox-text">Оснащение номера</p>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="empty" id="empty">
+                                <label for="empty"> &nbsp; Пустой номер</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="sunbed" id="sunbed">
+                                <label for="sunbed"> &nbsp; Лежак</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="scratchy" id="scratchy">
+                                <label for="scratchy"> &nbsp; Когтеточка</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="playground" id="playground">
+                                <label for="playground"> &nbsp; Игровой-комплекс</label>
+                            </div>
+                            <div class="checkbox-text">
+                                <input type="checkbox" name="house" id="house">
+                                <label for="house"> &nbsp; Домик</label>
+                            </div>
+                            <input type="reset" name="reset" id="reset" value="Сбросить фильтр">
+
+                            </form>
+                    </div>
+                    <div class="store__right-block">
+                            <div class="store__item" id="economy">
+                                <h3 class="item__title">Эконом</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 90х70х180 см</li>
+                                    <li>Площадь - 0,63 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store__item" id="economy-plus">
+                                <h3 class="item__title">Эконом плюс</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 90х100х180 см</li>
+                                    <li>Площадь - 0,90 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store__item" id="comfort">
+                                <h3 class="item__title">Комфорт</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 100х125х180 см</li>
+                                    <li>Площадь - 1,13 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store__item" id="suit">
+                                <h3 class="item__title">Сьют</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                                    <li>Площадь - 1,56 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store__item" id="luxe">
+                                <h3 class="item__title">Люкс</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 160х160х180 см</li>
+                                    <li>Площадь - 2,56 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store__item" id="luxe-plus">
+                                <h3 class="item__title">Супер Люкс</h3>
+                                <ul class="item__list">
+                                    <li>Размеры (ШхГхВ) - 180х160х180 см</li>
+                                    <li>Площадь - 2,88 м2</li>
+                                    <li>Оснащение номера</li>
+                                    <li>Цена за сутки:</li>
+                                </ul>
+                                <div class="offers__inner-btn">
+                                    <a href="#" class="offers__btn item__btn">
+                                       <p class="offers__btn-text item__btn-text">Забронировать</p> 
+                                        <img src="./img/other paw.svg" alt="paw">
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="discount">
+            <div class="wrapper">
+                <div class="discount__section">
+                    <div class="discount__inner">
+                        <h3 class="__title">
+                            Каждый 7-й день
+                        </h3>
+                        <h2 class="__title discount__title">бесплатно!</h2>
+                        <p class="discount__text">Акция действует при размещении
+                            в номерах “Люкс” и “Супер-Люкс” </p>
+                        <a href="#" class="intro__btn">
+                        
+                            <p class="intro__btn-text">  Забронировать</p>  
+                            <img src="./img/paw.svg" alt="btn_pow" class="intro__btn-img"> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts" id="contacts">
+            <div class="cont__section conteiner">
+                <div class=" __title cont__title">
+                    <h1>Как нас найти</h1>
+                </div>
+                <div class="cont__inner">
+                    <div class="cont__inner-text">
+                        <h3 class="cont__inner-title">Адрес</h3>
+                        <h4 class="cont__subtitle">Санкт-Петербург,
+                            ул Большая Конюшенная, д 19</h4>
+                        </div>
+                    <div class="cont__inner-text">
+                        <h3 class="cont__inner-title">Режим работы</h3>
+                        <h4 class="cont__subtitle">Ежедневно, с 9:00 до 20:00</h4>
+                    </div>
+                    <div class="cont__inner-text">
+                        <h3 class="cont__inner-title">Телефон</h3>
+                        <h4 class="cont__subtitle">8 (800) 333-55-99</h4>
+                    </div>
+                    <div class="cont__inner-text">
+                        <h3 class="cont__inner-title">E-mail</h3>
+                        <h4 class="cont__subtitle">info@cat-hotel.ru</h4>
+                    </div>
+                    <div class="cont__inner-text">
+                        <h3 class="cont__inner-title">Социальные сети</h3>
+                        <ul class="cont__link-list">
+                            <a href="#" class="cont__link">
+                                <img src="./img/fb.svg" alt="facebook">
+                            </a>
+                            <a href="#" class="cont__link">
+                                <img src="./img/inst.svg" alt="instagram">
+                            </a>
+                            <a href="#" class="cont__link">
+                                <img src="./img/vk.svg" alt="">
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </main>
+<footer class="footer">
+    <div class="footer__section">
+        <div class="wrapper header__section">
+            <div class="header__logo">
+                <a href="/main/index.html" class="header__logo-link">
+                    <img src="./img/лого.svg" alt="Котейка">
+                </a>
+            </div>
+            <nav class="footer__navbar" >
+                <ul class="footer__nav">
+                    <li class="footer__list">
+                        <a href="#reason" class="footer__list-link">
+                            Почему мы?
+                        </a>
+                    </li>
+                    <li class="footer__list">
+                        <a href="#offers" id="nav-offers" class="footer__list-link">
+                            Номера
+                        </a>
+                    </li>
+                    <li class="footer__list">
+                        <a href="#review" class="footer__list-link">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="footer__list">
+                        <a href="#contacts" id="nav-cont" class="footer__list-link">
+                            Как нас найти
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+    </div>
+    <div class="footer__end wrapper">
+        <p class="footer__cont-end"> 2019 Все права защищены</p>
+        <p>Политика конфиденциальности</p>
+    </div>
+</footer>
+<div class="modal__window">
+    <div class="modal__inner">
+        <span class="modal__close"></span>
+        <h2 class="modal__title">Забронировать номер</h2>
+        <form action="" class="modal__form">
+            <input type="text" placeholder="Ваше имя" class="modal__input">
+            <input type="text" placeholder="Имя питомца" class="modal__input">
+            <input type="tel" placeholder="Телефон" class="modal__input">
+            <input type="email" placeholder="E-mail" class="modal__input">
+            <div> <h3>Дата заезда с  <input type="date" class="modal__input-data"> по <input type="date"  class="modal__input-data"></h3>
+            </div>
+            <input type="submit" value="Оставить заявку" class="modal__btn modal__input" id="modal__btn"><label for="modal__btn" class="btn-label">&nbsp;</label>
+        </form>
+    </div>
+</div>
+<div class="modal__window modal__window-active">
+    
+    <div class="modal__thanks-inner modal__inner">
+        <span class="modal__close"></span>
+        <h2 class="modal__title">Спасибо за заявку!</h2>
+        <h3 class="modal__subtitle">Мы свяжемся с вами в ближайшее время</h3>
+        <button class="modal__btn modal__input" id="modal__btn-thanks">Ок</button>
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
